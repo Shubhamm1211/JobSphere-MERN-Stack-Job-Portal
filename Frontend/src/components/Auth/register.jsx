@@ -25,7 +25,7 @@ const Register = () => {
     try {
       //destructure the data 
       const { data } = await axios.post(
-        "http://localhost:5000/api/v1/user/register",
+        "https://jobsphere-mern-stack-job-portal-backend.onrender.com/api/v1/user/register",
         { name,email,phone, role, password }, //this data send to backend
         {
           headers: {
