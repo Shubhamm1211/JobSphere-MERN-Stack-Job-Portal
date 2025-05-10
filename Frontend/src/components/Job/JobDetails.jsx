@@ -13,7 +13,7 @@ const JobDetails = () => {
   //when ever we refresh our page use effect runs 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/v1/job/${id}`, {
+      .get(`https://jobsphere-mern-stack-job-portal-backend.onrender.com/api/v1/job/${id}`, {
         withCredentials: true,
       })
       .then((res) => {
