@@ -18,7 +18,7 @@ const MyApplications = () => {
     try {
       if (user && user.role === "Employeer") {
         axios
-          .get("http://localhost:5000/api/v1/application/employer/getall", {
+          .get("https://jobsphere-mern-stack-job-portal-backend.onrender.com/api/v1/application/employer/getall", {
             withCredentials: true,
           })
           .then((res) => {
@@ -26,7 +26,7 @@ const MyApplications = () => {
           });
       } else {
         axios
-          .get("http://localhost:5000/api/v1/application/jobseeker/getall", {
+          .get("https://jobsphere-mern-stack-job-portal-backend.onrender.com/api/v1/application/jobseeker/getall", {
             withCredentials: true,
           })
           .then((res) => {
@@ -47,7 +47,7 @@ const MyApplications = () => {
   const deleteApplication = (id) => {
     try {
       axios
-        .delete(`http://localhost:5000/api/v1/application/delete/${id}`, {
+        .delete(`https://jobsphere-mern-stack-job-portal-backend.onrender.com/api/v1/application/delete/${id}`, {
           withCredentials: true,
         })
         .then((res) => {
