@@ -17,7 +17,7 @@ const MyJobs = () => {
     const fetchJobs = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:5000/api/v1/job/getmyJobs",
+          "https://jobsphere-mern-stack-job-portal-backend.onrender.com/api/v1/job/getmyJobs",
           { withCredentials: true }
         );
         setMyJobs(data.myjobs);
@@ -47,7 +47,7 @@ const MyJobs = () => {
   const handleUpdateJob = async (jobId) => {
     const updatedJob = myJobs.find((job) => job._id === jobId);
     await axios
-      .put(`http://localhost:5000/api/v1/job/update/${jobId}`, updatedJob, {
+      .put(`https://jobsphere-mern-stack-job-portal-backend.onrender.com/api/v1/job/update/${jobId}`, updatedJob, {
         withCredentials: true,
       })
       .then((res) => {
@@ -62,7 +62,7 @@ const MyJobs = () => {
   //Function For Deleting Job
   const handleDeleteJob = async (jobId) => {
     await axios //jobId accepted as a parameter when we click on job details 
-      .delete(`http://localhost:5000/api/v1/job/delete/${jobId}`, {
+      .delete(`https://jobsphere-mern-stack-job-portal-backend.onrender.com/api/v1/job/delete/${jobId}`, {
         withCredentials: true,
       })
       .then((res) => {
