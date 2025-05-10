@@ -10,7 +10,7 @@ const Jobs = () => {
   useEffect(() => { // useEfect will run when we reload our project
     try {
       axios
-        .get("http://localhost:5000/api/v1/job/getall", {
+        .get("https://jobsphere-mern-stack-job-portal-backend.onrender.com/api/v1/job/getall", {
           withCredentials: true,
         })
         .then((res) => {
