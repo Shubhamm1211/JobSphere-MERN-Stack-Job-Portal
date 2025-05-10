@@ -18,7 +18,7 @@ const app=express();
 app.use(cookieParser());
 app.use(
     cors({
-      origin: ["http://localhost:5173"], // the array will contain the info of different frontends that we would like to link
+      origin: ["https://jobsphere-mern-stack-job-portal-frontend.onrender.com"], // the array will contain the info of different frontends that we would like to link
       method: ["GET", "POST", "DELETE", "PUT"],
       credentials: true,
     })
