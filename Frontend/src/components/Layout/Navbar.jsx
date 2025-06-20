@@ -34,7 +34,7 @@ const Navbar = ()=>{
     <nav className={isAuthorized ? "navbarShow" : "navbarHide"}>
       <div className="container">
         <div className="logo">
-          <img src="/JobSpehereW2new.jpg" alt="logo" />
+          <img src="/JobSpehereW2new2.png" alt="logo" />
         </div>
         <ul className={!show ? "menu" : "show-menu menu"}>
           <li>
